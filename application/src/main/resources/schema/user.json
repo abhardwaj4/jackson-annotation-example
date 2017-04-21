@@ -1,0 +1,19 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "javaType": "com.abhishek.jackson.types.User",
+    "properties": {
+        "firstName": {
+            "type": "string",
+            "description": "First Name of the user."
+        },
+        "lastName": {
+            "type": "string",
+            "description": "Last Name of the user."
+        },
+        "age": {
+            "type": "string",
+            "description": "Age of the user."
+        }
+    }
+}

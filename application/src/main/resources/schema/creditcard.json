@@ -1,0 +1,50 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "description": "Credit Card payment instrument",
+    "javaType": "com.abhishek.jackson.types.CreditCard",
+    "properties": {
+        "cardAlias": {
+            "type": "string",
+            "description": "Credit Card Alias"
+        },
+        "cardNumber": {
+            "type": "string",
+            "description": "Card number",
+            "skipSerialize": "true"
+        },
+        "last4CardNumber": {
+            "type": "string",
+            "description": "Last 4 card number"
+        },
+        "cardHolderName": {
+            "type": "string",
+            "description": "Card holder name (as it appears on card)"
+        },
+        "cardHolderFirstName": {
+            "type": "string",
+            "description": "Card holder first name"
+        },
+        "cardHolderLastName": {
+            "type": "string",
+            "description": "Card holder last name"
+        },
+        "expirationMonthYear": {
+            "type": "string",
+            "description": "Expiration month/year"
+        },
+        "type": {
+            "type": "string",
+            "enum": [
+                "VISA",
+                "MSCD",
+                "AMEX",
+                "DISC"
+            ]
+        },
+        "cvv": {
+            "type": "string",
+            "description": "verification code"
+        }
+    }
+}
