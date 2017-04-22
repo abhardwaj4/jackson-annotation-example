@@ -8,7 +8,9 @@ import com.sun.codemodel.JFieldVar;
 import org.jsonschema2pojo.AbstractAnnotator;
 
 /**
- *
+ * This annotator is invoked by the jsonschema2pojo maven plugin during source 
+ * generation phase of the application project build.
+ * 
  * @author Abhishek Bhardwaj
  */
 public class JacksonSampleAnnotator extends AbstractAnnotator {
@@ -29,7 +31,7 @@ public class JacksonSampleAnnotator extends AbstractAnnotator {
     public void propertyInclusion(JDefinedClass clazz, JsonNode schema) {
         super.propertyInclusion(clazz, schema);
         
-        // need this annotation on the POJO for D3LogFilter to kick in
+        // need this annotation on the POJO for JacksonSampleFilter to kick in
         clazz.annotate( JsonFilter.class ).param( "value", SKIP_SERIALIZE_FILTER );
     }
 }

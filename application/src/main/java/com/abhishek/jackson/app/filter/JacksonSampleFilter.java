@@ -8,7 +8,10 @@ import com.fasterxml.jackson.databind.ser.PropertyWriter;
 import com.fasterxml.jackson.databind.ser.impl.SimpleBeanPropertyFilter;
 
 /**
- *
+ * This filter's instance is added to Jackson's ObjectMapper builder.
+ * This gets invoked during the serialization process of the POJO annotated with
+ * @JsonFilter annotation.
+ * 
  * @author Abhishek Bhardwaj
  */
 public class JacksonSampleFilter extends SimpleBeanPropertyFilter {
